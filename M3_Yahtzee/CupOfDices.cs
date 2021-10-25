@@ -9,13 +9,40 @@ namespace M3_Yahtzee
 
         private int _count = 0;
         public int Count => _count;
+        public DiceFace this[int idx]
+        {
+            get
+            {
+                if (Count <= 0)
+                    throw new IndexOutOfRangeException("No dices in cup");
+                if (idx < 0 || idx > Count - 1)
+                    throw new IndexOutOfRangeException("Wrong idx");
 
-        DiceFace ICupOfDices.Highest => throw new NotImplementedException();
+                return dices[idx];
+            }
+        }
 
-        DiceFace ICupOfDices.Lowest => throw new NotImplementedException();
+        public DiceFace Highest
+        {
+            get
+            {
+                Sort();
+                return this[Count - 1];
+            }
+        }
+        public DiceFace Lowest
+        {
+            get
+            {
+                Sort();
+                return this[0];
+            }
+        }
 
-        DiceFace ICupOfDices.this[int idx] => throw new NotImplementedException();
-
+        public void Sort()
+        {
+            dices.Sort();
+        }
         public void Shake()
         {
             var rnd = new Random();
@@ -23,6 +50,7 @@ namespace M3_Yahtzee
             for (int i = 0; i < Count; i++)
             {
                 dices.Add((DiceFace)rnd.Next((int)DiceFace.One, (int)DiceFace.Six + 1));
+                rnd.Next(1, 7);
 
                 #region Test code
                 //To Test IsYahtzee
@@ -34,9 +62,16 @@ namespace M3_Yahtzee
             }
         }
 
-        void ICupOfDices.Sort()
+        public override string ToString()
         {
-            throw new NotImplementedException();
+            string sRet = $"Cup contains {Count} dices\n";
+            for (int i = 0; i < Count; i++)
+            {
+                sRet += $"{this[i],8},";
+                if ((i + 1) % 10 == 0)
+                    sRet += "\n";
+            }
+            return sRet;
         }
 
         public CupOfDices()

@@ -50,15 +50,12 @@ namespace M3_Yahtzee
             for (int i = 0; i < Count; i++)
             {
                 dices.Add((DiceFace)rnd.Next((int)DiceFace.One, (int)DiceFace.Six + 1));
-                rnd.Next(1, 7);
 
-                #region Test code
                 //To Test IsYahtzee
                 //dices.Add(DiceFace.Four);
 
                 //To Test IsLargeStraight
                 //dices.Add(DiceFace.One + i%6);
-                #endregion
             }
         }
 

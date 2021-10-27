@@ -14,8 +14,8 @@ namespace M3_Yahtzee
             //Should be exceptions
             //Console.WriteLine(cup1[0]);
             //Console.WriteLine(cup1[cup1.Count-1]);
-            //Console.WriteLine(cup1.Lowest);
-            //Console.WriteLine(cup1.Highest);
+            Console.WriteLine(cup1.Lowest);
+            Console.WriteLine(cup1.Highest);
 
             //Should be exceptions
             //var cup2 = new CupOfDices(101);
@@ -27,13 +27,28 @@ namespace M3_Yahtzee
             Console.WriteLine(cup4[cup4.Count - 1]);
             Console.WriteLine(cup4.Lowest);
             Console.WriteLine(cup4.Highest);
-
+ 
             var cup5 = new CupOfDices(100);
             Console.WriteLine(cup5);
             Console.WriteLine(cup5[0]);
             Console.WriteLine(cup5[cup5.Count - 1]);
             Console.WriteLine(cup5.Lowest);
             Console.WriteLine(cup5.Highest);
+
+            Console.WriteLine("\nTesting DoubleDice");
+            //Test DoubleDice
+            var doubleDice = new DoubleDice();
+            Console.WriteLine(doubleDice);
+            Console.WriteLine($"IsPair: {doubleDice.IsPair}");
+
+            Console.WriteLine("\nTesting YahtzeeDices");
+            //Test the YahtzeeDices
+            var yahtzeeDices = new YahtzeeDices();
+            Console.WriteLine(yahtzeeDices);
+            Console.WriteLine($"IsYahtzee: {yahtzeeDices.IsYahtzee}");
+            Console.WriteLine($"IsLargeStraight: {yahtzeeDices.IsLargeStraight}");
+            Console.WriteLine($"Chance: {yahtzeeDices.Chance}");
+
         }
     }
 }

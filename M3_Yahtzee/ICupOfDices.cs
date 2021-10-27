@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace M3_Yahtzee
 {
-    public enum DiceFace { One = 1, Two, Three, Four, Five, Six }
+    public enum DiceFace { One=1, Two, Three, Four, Five, Six}
     interface ICupOfDices
     {
         /// <summary>

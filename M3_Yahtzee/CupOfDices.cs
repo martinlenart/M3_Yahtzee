@@ -13,10 +13,12 @@ namespace M3_Yahtzee
         {
             get
             {
+                /*
                 if (Count <= 0)
                     throw new IndexOutOfRangeException("No dices in cup");
                 if (idx < 0 || idx > Count - 1)
                     throw new IndexOutOfRangeException("Wrong idx");
+                */
 
                 return dices[idx];
             }

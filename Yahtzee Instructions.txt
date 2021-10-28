@@ -1,0 +1,34 @@
+
+Ni ska skapa en klass som modellerar tärningar i en kopp. 
+En användare av klassen ska kunna följande:
+- Antal tärningar i koppen
+- Läsa en tärning med index
+- Högsta och lägsta tärningen
+- Sortera tärningar i nummerordning
+- Skaka koppen och få slumpmässiga tärningar
+
+Sprint 1
+- Besluta om interface
+- Constructors
+- Vad behövs för att kunna skriva ut klassen
+
+Sprint 2 
+- Skapa en class som implementerar interface
+- Internstrukturen för tärningar i koppen
+- Skapa constructors
+- Blanda tärningarna
+
+Sprint 3
+- Skriva ut tärningar
+- Läsa tärningar med index
+- Sortera tärningar
+- Högsta och Lägsta tärningar
+
+Sprint 4
+- Skapa DoubleDice klass
+- Implementera IsPair property
+
+Sprint 5
+- Skapa YahtzeeDices
+- Implementera IsLargeStraight property
+- Implementera IsYahtzee property
